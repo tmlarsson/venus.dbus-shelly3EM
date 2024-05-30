@@ -19,10 +19,10 @@ After that call the install.sh script.
 The following script should do everything for you:
 ```
 wget https://github.com/tmlarsson/venus.dbus-shelly3EM/archive/refs/heads/main.zip
-unzip main.zip "venus.dbus-shellyPlug-main/*" -d /data
-mv /data/venus.dbus-shellyPlug-main /data/dbus-shellyPlug
-chmod a+x /data/dbus-shellyPlug/install.sh
-/data/dbus-shellyPlug/install.sh
+unzip main.zip "venus.dbus-shelly3EM-main/*" -d /data
+mv /data/venus.dbus-shelly3EM-main /data/dbus-shelly3EM
+chmod a+x /data/dbus-shelly3EM/install.sh
+/data/dbus-shelly3EM/install.sh
 rm main.zip
 ```
 
