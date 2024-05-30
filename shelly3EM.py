@@ -195,14 +195,12 @@ class DbusShellyService:
 
   def _roleChanged(self, path, value):
     if value not in ['grid', 'pvinverter', 'genset', 'acload']:
-      return False
+        return False
 
     self.settings['/Role'] = value
-
     self.destroy()
-
-    return True # accept the change
-
+    self._initPowerMeter()
+    return True  # accept the change
 
   def _handleChangedValue(self, path, value):
     if path == '/Position':
@@ -355,7 +353,7 @@ class DbusShellyService:
 
 
 
-  def _getMeterDate(self,shellyData,meterIndex):
+  def _getMeterData(self,shellyData,meterIndex):
     powerAC = None
     volatageAC = None
     currentAC = None
